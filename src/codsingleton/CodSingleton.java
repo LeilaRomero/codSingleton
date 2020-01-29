@@ -13,16 +13,10 @@ public class CodSingleton {
      */
     public static void main(String[] args) {
 
-        Persona Luis = Persona.getSingletonInstance();
-        Luis.setNombre("Luis");
-        Luis.setApellido("Lopez");
-        Luis.setEdad(20);
-        JOptionPane.showMessageDialog(null, Luis);
-        Persona Yo = Persona.getSingletonInstance();
-        Yo.setNombre("Ana");
-        Yo.setApellido("Perez");
-        Yo.setEdad(21);
-        JOptionPane.showMessageDialog(null, Yo);
+       Persona Luis= Persona.getSingletonInstance("Luis", "Perez", 21);
+       Persona Ana=Persona.getSingletonInstance("Ana", "Lopez", 20);
+        System.out.println(Luis.getNombre());
+        System.out.println(Ana.getNombre());
     }
 
 }

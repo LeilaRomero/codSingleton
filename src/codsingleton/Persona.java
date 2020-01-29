@@ -49,8 +49,14 @@ public class Persona {
         return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + '}';
     }
 
-    public static Persona getSingletonInstance() {
-        laUnica = new Persona(nombre, apellido, edad);
+    public static Persona getSingletonInstance(String nombre, String apellido, int edad) {
+        if (laUnica==null){
+            laUnica= new Persona(nombre,apellido,edad);
+           
+        }
+        else{
+            System.out.println("No se puede crear el objeto "+ nombre+apellido+edad);
+        }
         return laUnica;
     }
 
